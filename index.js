@@ -48,24 +48,34 @@ function validateMessage() {
 const button = document.getElementById("button");
 const error = document.getElementById("error");
 const messag_box = document.getElementById("message");
-const phone_number = document.getElementById("phone_number");
+const phone_number_box = document.getElementById("phone_number");
 const email_box = document.getElementById("email");
 const full_name_box = document.getElementById("full_name");
 
 button.addEventListener("click", () => {
     tag = document.createElement('div');
-    if (!validateFullName()) {
+    if (! validateFullName()) {
         text = document.createTextNode("Full Names should be a minimum of 5 characters.");
-        tag.appenChild(text);
+        tag.appendChild(text);
         error.appendChild(tag);
         full_name_box.addClass("red-border");
     };
-    if (!validateFullName()) {
-        text = document.createTextNode("Full Names should be a minimum of 5 characters.");
-        tag.appenChild(text);
+    if (! validateEmail()) {
+        text = document.createTextNode("Enter a valid email.");
+        tag.appendChild(text);
         error.appendChild(tag);
-        button.addClass("red-border");
+        email_box.addClass("red-border");
     };
-
-}
-);
+    if (! validatePhoneNumber()){
+        text = document.createTextNode("Enter a valid phone number.");
+        tag.appendChild(text);
+        error.appendChild(tag);
+        phone_number_box.addClass("red-border");
+    };
+    if (! validateMessage()){
+        text = document.createTextNode("Enter a valid message: your message should be at least 100 character.");
+        tag.appendChild(text);
+        error.appendChild(tag);
+        messag_box.addClass("red-border");
+    };
+});

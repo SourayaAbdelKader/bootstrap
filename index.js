@@ -17,12 +17,18 @@ function validateEmail() {
 
 //Phone Number should start with +961 and followed by either 7 digits (if it's a 03 number, i.e: +9613456789) or. followed by 8 digits (if it's a 71/76/70/etc: +96171345234).
 function validatePhoneNumber() {
-    let phone_numer = document.getElementById("phone_number").value;
-    if (x == "") {
-      return false;
+    let phone_number = document.getElementById("phone_number").value;
+    if (phone_number.slice(0, 4) != "+961") {
+        return false
+    }
+    if (phone_number[4] == 3) {
+        if (phone_number.slice(4,).length != 7) {
+            return false
+        }
+    } else if (phone_number.slice(4,).length != 8){
+        return false;
     };
-
-}
+};
 
 //Message should be a minimum of 100 characters.
 function validateMessage() {
@@ -31,5 +37,6 @@ function validateMessage() {
       return false;
     };
 };
+validateEmail()
 
 //If the validation fails, please show a div (section) under the Contact Me title highlighting what went wrong with a red background. 

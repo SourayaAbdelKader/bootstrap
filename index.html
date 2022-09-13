@@ -9,36 +9,112 @@
     </head>
     <body>
         <!-- hero section-->
-        <div class="header">
-            <div>
-                <h1> Start bootstrap </h1>
+        <section>
+            <div class="header">
+                <div>
+                    <h1> Start bootstrap </h1>
+                </div>
+                <div class="flex">
+                    <div> Portfolio </div>
+                    <div> About </div>
+                    <div> Contact </div>
+                </div>
             </div>
-            <div>
-                <div> Portfolio </div>
-                <div> About </div>
-                <div> Contact </div>
+            <div class="hero">
+                <h1> START BOOTSTRAP </h1>
+                <p> Graphic Artist - Web Designer - Illustrator </p>
             </div>
-        </div>
+        </section>
         <!-- end of hero section-->
-        <div class="contact"> 
-            <h1> Contact ME</h1>
-            <div id="error"> </div>
+
+        <!-- start portfolio section -->
+        <section>
             <div>
-                <input id="full_name" type="text" name="full-name" placeholder="Full name"> </input>
+                <h2> PORTFOLIO </h2>
+                <center> <img src="./images/Picture1.png"> </center>
             </div>
-            <div> 
-                <input id="email" type="email" name="email" placeholder="Email adress"> </input>
+            <div class="display">
+                <img src="./images/cabin.png">
+                <img src="./images/cake.png">
+                <img src="./images/circus.png">
+                <img src="./images/game.png">
+                <img src="./images/safe.png">
+                <img src="./images/submarine.png">
             </div>
-            <div> 
-                <input id="phone_number" type="tel" name="phone" placeholder="Phone number"> </input>
-            </div>
-            <div> 
-                <input id="message" type="text" name="message" placeholder="Message"> </input>
-            </div>
+        </section>
+        <!-- end of portfolio section -->
+
+        <!-- start about section -->
+        <section class="about">
             <div>
-                <button id="button" type="submit"> Send </button>
+                <h2> ABOUT </h2>
             </div>
-        </div>
+            <div class="flex">
+                <div>
+                    <p> Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p>
+                </div>
+                <div>
+                    <p> You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional! </p>
+                </div>
+            </div>
+            <div class="button">
+                <button type="submit"> Free Download!</button>
+            </div>
+
+        </section>
+        <!-- end about section -->
+        
+        <!-- start contact me section -->
+        <section>
+            <div class="contact"> 
+                <h2> Contact ME</h2>
+                <div id="error"> </div>
+                <div class="user-input">
+                    <input id="full_name" type="text" name="full-name" placeholder="Full name"> </input>
+                </div>
+                <div class="user-input"> 
+                    <input id="email" type="email" name="email" placeholder="Email adress"> </input>
+                </div>
+                <div class="user-input"> 
+                    <input id="phone_number" type="tel" name="phone" placeholder="Phone number"> </input>
+                </div>
+                <div class="user-input"> 
+                    <input id="message" type="text" name="message" placeholder="Message"> </input>
+                </div>
+                <div class="user-input">
+                    <button id="send" id="button" type="submit"> Send </button>
+                </div>
+            </div>
+        </section>
+        <!-- end of contact me section -->
+
+        <!-- start of footer section -->
+        <section>
+            <div class="footer">
+                <div class="flex-footer">
+                    <div> 
+                        <h3> LOCATION </h3>
+                        <p> 2215 John Daniel Drive </p>
+                        <p> Clark, MO 65243 </p>
+                    </div>
+                    <div>
+                        <h3> AROUND THE WEB </h3>
+                        <div>
+
+                        </div>
+                    </div>
+                    <div>
+                        <h3> ABOUT FREELANCER </h3>
+                        <p> Freelance is a free to use, MIT licensed Bootstrap theme created by <span>Start Bootstrap</span>. </p>
+                    </div>
+                </div>
+                <div> 
+                    <p> Copyright © Your Website 2022 </p>
+                </div>
+            </div>
+        </section>
+        <!-- end of footer section -->
+        
         <script src="/index.js"></script>
     </body>
 </html>

@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title> Freelancer - Theme preview - Start Boostrap</title>
-        <link rel="stylesheet" href="./styles/styles.css" />
+        <link rel="stylesheet" href="/frontend/styles/styles.css" />
     </head>
     <body>
         <!-- hero section-->
@@ -70,16 +70,24 @@
                 <h2> Contact ME</h2>
                 <div id="error"> </div>
                 <div class="user-input">
-                    <input id="full_name" type="text" name="full-name" placeholder="Full name"> </input>
+                    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                        <input id="full_name" type="text" name="full-name" placeholder="Full name"> </input>
+                    </form>
                 </div>
                 <div class="user-input"> 
-                    <input id="email" type="email" name="email" placeholder="Email adress"> </input>
+                    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                        <input id="email" type="email" name="email" placeholder="Email adress"> </input>
+                    </form>
                 </div>
                 <div class="user-input"> 
-                    <input id="phone_number" type="tel" name="phone" placeholder="Phone number"> </input>
+                    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                        <input id="phone_number" type="tel" name="phone" placeholder="Phone number"> </input>
+                    </form>
                 </div>
-                <div class="user-input"> 
-                    <textarea id="message" type="text" name="message" placeholder="Message"></textarea>
+                <div class="user-input">
+                    <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                        <textarea id="message" type="text" name="message" placeholder="Message"></textarea>
+                    </form>
                 </div>
                 <div class="user-input">
                     <button id="send" id="button" type="submit"> Send </button>
@@ -115,6 +123,6 @@
         </section>
         <!-- end of footer section -->
         
-        <script src="index.js"></script>
+        <script src="/frontend/JS/index.js"></script>
     </body>
 </html>

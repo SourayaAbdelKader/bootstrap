@@ -5,7 +5,7 @@ Include CORS - how ? Allow Headers!
 
 include("connection.php");
 
-$query = $mysqli->prepare("SELECT name, email, phone, message FROM users;");
+$query = $mysqli->prepare("SELECT name, email, phone, message FROM messages;");
 $query->execute();
 $array = $query->get_result();
 

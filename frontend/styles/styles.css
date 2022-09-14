@@ -94,6 +94,18 @@ h2 {
     margin-bottom: 1vw;
 }
 
+.user-input > textarea {
+    background-color: transparent;
+    border-top: 0cm;
+    border-right: 0cm;
+    border-left: 0cm;
+    padding: 1vw 3vw 1vw 0vw;
+    width: 30vw;
+    font-size: 20px;
+    margin-bottom: 1vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 #send {
     background-color: #1ABC9C;
     color: white;

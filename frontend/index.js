@@ -41,7 +41,7 @@ function validateMessage(message) {
 };
 
 //If the validation fails, please show a div (section) under the Contact Me title highlighting what went wrong with a red background. 
-const button = document.getElementById("button");
+const button = document.getElementById("send");
 const error = document.getElementById("error");
 let messag_box = document.getElementById("message");
 let phone_number_box = document.getElementById("phone_number");
@@ -87,4 +87,25 @@ button.addEventListener("click", () => {
             error.appendChild(tag);
             messag_box.classList.add("red-border");
         }};
+
+    if (validateFullName(name) && validateEmail(email) && validatePhoneNumber(phone_number) && validateMessage(message))
+    { 
+        text = document.createTextNode("Sent!");
+        error.appendChild(text);
+
+        messag_box.classList.remove("red-border");
+        phone_number_box.classList.remove("red-border");
+        email_box.classList.remove("red-border");
+        full_name_box.classList.remove("red-border");
+
+        localStorage.setItem("full name", name );
+        localStorage.setItem("email", email);
+        localStorage.setItem("phone number", phone_number);
+        localStorage.setItem("message", message);
+        
+        document.getElementById("full_name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("phone_number").value = "";
+        document.getElementById("message").value ="";
+    }
 });
